@@ -3,7 +3,7 @@
 
 ### 腾讯f大大推荐了几本书，接下来两个月不求融汇贯通，但必须初步了解及应用：
 
-- C++经典书籍《C++ primer》
+-  C++经典书籍《C++ primer》
 
 - 《inside the C++ object model》
 
@@ -16,6 +16,7 @@
 - TCP/IP协议
 
 - Redis
+
 初步计划，先看《C++ primer》第五版，《Unix高级环境编程》
 平常用用linux（又要回到windows下的虚拟机了。。）
 
