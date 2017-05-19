@@ -1,0 +1,91 @@
+1.简单语句
+空语句
+常见的用法是循环中要做的事在条件部分就已经完成，语法上需要一个；表示空语句
+
+复合语句(块)
+一个块就是一个作用域
+
+2.语句作用域
+在if、switch、while、for语句的控制结构内定义的变量只在该语句内部可用
+
+3.条件语句
+if...else if...else
+if 和 else 的循环体都加花括号，即使只有一句，方便添加，也避免出错，缩进不能表示if...else的配对
+
+switch
+case必须是整型常量表达式
+switch ()
+{
+    case '':
+        ;
+        break;
+    ...
+    default:
+        ;
+        break;
+}
+如果需要为某个case分支定义并初始化一个变量，应该定义在块内，限制变量的作用域
+case '':
+    {
+    }
+    break;
+
+4.迭代语句
+while循环
+不确定循环多少次时
+想在循环结束后访问循环控制变量
+
+for循环
+for(init-statement;cond;expr)
+    statement
+init-statement只在最开始执行一次，然后判断cond，执行statement，执行expr，后三步循环至cond不满足
+for循环中init-statement定义的变量在for循环结束之后就不能用了
+
+init-statement可以定义多个相同基础类型变量
+
+范围for语句
+遍历容器或其他序列的所有元素
+不能通过范围for增删元素，因为它缓存了end()
+
+do while语句
+do
+{
+    statement；
+}while (condition);
+
+5.跳转语句
+break跳出最近的循环或者switch
+
+continue终止最近循环的当前迭代并立即开始下一次迭代
+
+6.try和异常处理
+throw 抛出一个异常对象
+
+try
+try {
+    program-statements
+} catch (exception-declaration) {
+    handler-statements
+} catch (exception-declaration) {
+    handler-statements
+}
+
+标准异常
+#include <stdexcept>
+exception
+runtime_error
+range_error
+overflow_error
+underflow_error
+logic_error
+domain_error
+invalid_argument
+length_error
+out_of_range
+
+头文件exception中定义了exception
+头文件new中定义了bad_alloc
+头文件type_info中定义了bad_cast
+除了这三个初始化时不应提供参数，其他的都必须要提供一个表示错误信息的string或C风格字符串
+
+异常对象有个what()的成员函数，返回初始化时使用的字符串对象的副本，除了runtime_error返回string外，其他的返回const char*
