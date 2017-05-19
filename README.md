@@ -18,7 +18,7 @@
 - Redis
 
 初步计划，先看《C++ primer》第五版，《Unix高级环境编程》
-平常用用linux（又要回到windows下的虚拟机了。。）
+平常用用linux
 
 ### 进阶：
 
